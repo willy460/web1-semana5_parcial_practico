@@ -1,0 +1,104 @@
+/*
+BEM
+
+BLOCK__ELEMENT--MODIFIER
+
+¿que es bem?
+BEM es una metodologia para crear componentes web reutilizables y compartibles entre proyectos y equipos de trabajo.
+
+¿Como se define?
+- Bloques: componentes independientes que pueden reutilizarse en cualquier parte del proyecto.
+- Elementos: partes de un bloque que no tienen sentido por si solas y dependen de su bloque padre.
+- Modificadores: variaciones de un bloque o elemento que cambian su apariencia o comportamiento
+Ejemplo:
+.boton{ }
+.boton__icono{ } /*Elemento
+.boton__icono--highlight { } /*Modificador
+
+Beneficios:
+- Reutilizacion de codigo 
+- Facil mantenimiento
+- Facil escalabilidad
+- Facil colaboracion entre equipos
+- Mejor legibilidad del codigo
+*/
+
+*{
+    box-sizing: border-box;
+}
+html,
+body{
+    height: 100%;
+}
+
+body.site{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/*Bloque layout*/
+.layout{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 10vh 1fr 10vh;
+}
+.layout__header{
+    background-color:lightgreen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+}
+
+.layout__title{
+    margin: 0;
+    font-size: medium;
+}
+
+.layout__footer{
+    background: lightskyblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+}
+
+.layout__footer-text{
+    margin: 0;
+}
+
+.layout__main{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    min-height: 0;
+
+}
+
+/*bloque nav*/
+.nav{
+    background: lightsalmon;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow: auto;
+}
+
+.nav__link{
+    text-decoration: none;
+    padding: 8px 16px;
+
+}
+
+.nav__link:hover
+.nav__link--active{
+    background: lightyellow;
+}
+
+/*bloque content*/
+.content{
+    background: lightpink;
+    padding: 16px;
+    overflow: auto;
+    min-height: 0;
+}
